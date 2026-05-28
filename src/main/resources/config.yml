@@ -1,0 +1,31 @@
+# ============================================
+# EFTarkov 打怪金币插件 配置文件
+# ScriptIrc-config-version: 1
+# ============================================
+
+# 哪些世界打怪才给金币（世界名列表）
+enabled-worlds:
+  - ziyuan
+
+# 默认每只怪给的金币数量（如果怪物类型没有单独配置）
+default-reward: 10.0
+
+# 按怪物类型单独设置奖励（覆盖默认值）
+# 格式: 实体类型: 金币数量
+# 实体类型列表参考: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+mob-rewards:
+  ZOMBIE: 10.0
+  SKELETON: 12.0
+  CREEPER: 15.0
+  SPIDER: 8.0
+  ENDER_DRAGON: 500.0
+  WARDEN: 300.0
+
+# 是否在玩家聊天栏显示获得金币的消息
+show-reward-message: true
+
+# 获得金币时显示的消息（支持颜色代码 &）
+# 可用占位符:
+#   {amount} - 获得的金币数量
+#   {mob}    - 怪物类型名称
+reward-message: "&a击杀 {mob} 获得 &6{amount} 金币！"
